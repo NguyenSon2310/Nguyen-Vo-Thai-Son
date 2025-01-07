@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                        // Set target to ES6 (or later) for modern JavaScript
+    "module": "CommonJS",                   // Use CommonJS for modules (required by Node.js)
+    "lib": ["ES6"],                         // Use ES6 library for modern features
+    "strict": true,                         // Enable all strict type-checking options
+    "esModuleInterop": true,                // Allow importing non-ESM modules (like Prisma)
+    "skipLibCheck": true,                   // Skip library type checks to improve build speed
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file name casing
+    "outDir": "./dist",                     // Specify the output directory for compiled JavaScript
+    "rootDir": "./src",                     // Set the root directory for TypeScript files
+    "baseUrl": "./",                        // Base URL to resolve non-relative imports
+    "paths": {
+      "*": ["node_modules/*"]               // Resolve paths to node_modules
+    },
+    "resolveJsonModule": true,              // Allow importing JSON files
+    "sourceMap": true,                      // Generate source maps for debugging
+    "declaration": true,                    // Generate declaration files (.d.ts)
+    "noEmit": false                         // Ensure TypeScript emits JavaScript
+  },
+  "include": [
+    "src/**/*.ts"                            // Include all TypeScript files under the src directory
+  ],
+  "exclude": [
+    "node_modules",                          // Exclude node_modules
+    "dist"                                   // Exclude dist directory (output files)
+  ]
+}
